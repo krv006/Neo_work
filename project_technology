@@ -3,3 +3,14 @@ Sentry — bu real-time error monitoring va performance tracing vositasi.
 U web ilovalarda yuz beradigan xatoliklar (exceptions) va muammoli ishlash holatlari (performance issues) ni
 avtomatik ravishda kuzatadi va bu haqida sening dashboardingga yuboradi.
 
+Silk sizning Django ilovangizdagi requestlar, view funksiyalar va
+SQL so‘rovlarni profil qiladi va log qilib boradi
+
+
+🔧 Vazifa	                    📝 Tavsif
+Profiling	                    Har bir HTTP request va view’ning ish vaqtini ko‘rsatadi
+SQL Monitoring	                Har bir view ichida bajarilgan SQL so‘rovlar va ularning bajarilish vaqtini ko‘rsatadi
+Slow Query Logging	            Sezilarli vaqt oladigan SQL so‘rovlarni aniqlaydi
+Request/Response Analiz	        Har bir so‘rovning header, body, va response ma’lumotlarini saqlaydi
+Middleware Profiling	        Middleware’lar qancha vaqt olayotganini ko‘rsatadi
+Graph ko‘rinishlar	            Profil natijalarini grafik tarzda ko‘rsatadi
