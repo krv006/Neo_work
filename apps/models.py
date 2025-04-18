@@ -17,7 +17,7 @@ class Product(Model):
     discount_price = DecimalField(decimal_places=2, max_digits=10, null=True, blank=True)
     short_description = TextField()
     long_description = TextField()
-    image = ImageField(upload_to='products/images/')
+    image = ImageField(upload_to='products/images/', null=True, blank=True)
     stock = PositiveIntegerField(default=0)
     is_available = BooleanField(default=True)
     category = ForeignKey(Category, CASCADE, related_name='products')
