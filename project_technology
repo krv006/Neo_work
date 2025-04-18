@@ -14,3 +14,23 @@ Slow Query Logging	            Sezilarli vaqt oladigan SQL so‘rovlarni aniqlay
 Request/Response Analiz	        Har bir so‘rovning header, body, va response ma’lumotlarini saqlaydi
 Middleware Profiling	        Middleware’lar qancha vaqt olayotganini ko‘rsatadi
 Graph ko‘rinishlar	            Profil natijalarini grafik tarzda ko‘rsatadi
+
+Tenant — bu bitta ilova ichida bir nechta mustaqil mijozlar (kompaniyalar, userlar yoki tashkilotlar)
+uchun alohida ma’lumotlar va konfiguratsiyalar bilan ishlash imkonini beruvchi arxitekturadir.
+
+🏗️ Django’da tenant qanday bo‘ladi?
+Django’da tenantni amalga oshirish uchun:
+
+1. Database-Level Multitenancy:
+Har bir tenant uchun alohida schema yoki database ishlatiladi.
+
+Kutubxona: django-tenant-schemas, django-tenants
+
+Platforma	            Tenant misoli
+Slack	                Har bir "workspace" bu tenant
+Shopify     	        Har bir do‘kon — bu tenant
+Notion      	        Har bir jamoa — bu tenant
+Google Workspace    	Har bir kompaniya — bu tenant
+
+🎯 Qachon tenant kerak?
+Bir nechta mijozga xizmat qiladigan SaaS yaratmoqchi bo‘lsang
