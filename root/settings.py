@@ -21,8 +21,8 @@ INSTALLED_APPS = [
     # third party package
     'rest_framework',
     'drf_spectacular',
-    "graphene_django"
-
+    "graphene_django",
+    'silk',
 ]
 
 MIDDLEWARE = [
@@ -33,6 +33,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'silk.middleware.SilkyMiddleware',
 ]
 
 ROOT_URLCONF = 'root.urls'
@@ -111,4 +112,6 @@ sentry_sdk.init(
     send_default_pii=True,  # foydalanuvchi ma'lumotlarini yuborish
 )
 
+SILKY_MIDDLEWARE_CLASS = 'path.to.your.middleware.MyCustomSilkyMiddleware'
 
+SILK_ENABLED = True

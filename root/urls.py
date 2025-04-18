@@ -16,7 +16,6 @@ def trigger_error(request):
         return HttpResponse("Xatolik yuz berdi: bo‘lish 0 ga mumkin emas.")
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('apps.urls')),
@@ -28,5 +27,6 @@ urlpatterns = [
 
     path("graphql/", csrf_exempt(GraphQLView.as_view(graphiql=True))),
     path('sentry-debug/', trigger_error),
+    path('silk/', include('silk.urls', namespace='silk')),
 
 ]
