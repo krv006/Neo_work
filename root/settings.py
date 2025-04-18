@@ -100,3 +100,15 @@ from root.drf_settings import *
 GRAPHENE = {
     "SCHEMA": "root.schema.schema"
 }
+
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://3a902844548a59d37a2dca788c463a6b@o4509173908832256.ingest.us.sentry.io/4509173913747456",
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,  # performance kuzatuvi (xohlasang 0.2 yoki 0.5 qil)
+    send_default_pii=True,  # foydalanuvchi ma'lumotlarini yuborish
+)
+
+
