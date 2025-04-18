@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     # third party package
     'rest_framework',
     'drf_spectacular',
+    "graphene_django"
 
 ]
 
@@ -95,3 +96,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # todo DRF settings
 from root.drf_settings import *
+
+GRAPHENE = {
+    "SCHEMA": "root.schema.schema"
+}
